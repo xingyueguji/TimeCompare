@@ -60,7 +60,7 @@ void TimeCompare( Int_t nrun=536, Int_t nblock=0) {
         }
     }
     TCanvas *c1 = new TCanvas("c1","",1600,800);
-    c1->Divide(1,2);
+    c1->Divide(2,1);
     c1->cd(1);
     TimePulse->Draw();
     c1->cd(2);
