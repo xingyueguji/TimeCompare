@@ -1,6 +1,6 @@
 #include <cmath>
 
-void TimeCompare( Int_t nrun=536, Int_t nblock=0) {
+void TimeCompare( Int_t nrun=1372, Int_t nblock=0) {
     // if full replay : fullreplay = 1;
     // if single event: nevent = event number, replay = 1, fullreplay != 1;
     // if 20k replay: replay = 20k, fullreplay != 1;
@@ -56,6 +56,7 @@ void TimeCompare( Int_t nrun=536, Int_t nblock=0) {
             if(adcCounter[j] == nblock){
                 TimePulse->Fill(Pulsetime[j]);
                 TimeSample->Fill(SamplePulsetime[j]);
+		cout << "Pulse is " << Pulsetime[j] << "Sample is "<< SamplePulsetime[j] << endl;
             }
         }
     }
